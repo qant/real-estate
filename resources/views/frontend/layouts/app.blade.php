@@ -79,7 +79,7 @@
                 indicators: true,
             });
 
-            var city_list =<?php echo json_encode($citylist);?>;
+            var city_list =@json($citylist);
             $('input.autocomplete').autocomplete({
                 data: city_list
             });
@@ -90,6 +90,10 @@
 
             $('.tooltipped').tooltip();
 
+
+            $('.autocomplete_city').autocomplete({
+                data: city_list,
+            });
         });
         </script>
 

@@ -815,3 +815,9 @@ li.collection.agent-message {
     margin-top: 95px;
     padding-left: 20px;
 }
+/* Property list looks better because of diferent card size*/
+.row{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}

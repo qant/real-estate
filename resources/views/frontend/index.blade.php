@@ -3,7 +3,7 @@
 @section('content')
 
     <!-- SERVICE SECTION -->
-
+@if(count($services))>1
     <section class="section grey lighten-4 center">
         <div class="container">
             <div class="row">
@@ -22,7 +22,7 @@
             </div>
         </div>
     </section>
-
+@endif
 
     <!-- FEATURED SECTION -->
 
@@ -97,7 +97,7 @@
 
 
     <!-- TESTIMONIALS SECTION -->
-
+@if(count($testimonials)>0)
     <section class="section grey lighten-3 center">
         <div class="container">
 
@@ -127,10 +127,10 @@
         </div>
 
     </section>
-
+@endif
 
     <!-- BLOG SECTION -->
-
+@if(count($posts)>0)
     <section class="section center">
         <div class="row">
             <h4 class="section-heading">Recent Blog</h4>
@@ -181,7 +181,7 @@
             </div>
         </div>
     </section>
-
+@endif
 @endsection
 
 @section('scripts')

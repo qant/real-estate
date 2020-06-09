@@ -26,7 +26,8 @@
                 </div>
                 <div class="body">
                     <div class="table-responsive">
-                        <table class="table table-bordered table-striped table-hover dataTable js-exportable">
+                        <table class="table table-bordered table-striped table-hover">
+                        {{--<table class="table table-bordered table-striped table-hover dataTable js-exportable">--}}
                             <thead>
                                 <tr>
                                     <th>SL.</th>
@@ -46,7 +47,8 @@
                             <tbody>
                                 @foreach( $properties as $key => $property )
                                 <tr>
-                                    <td>{{$key+1}}</td>
+                                     {{--<td>{{$key+1}}</td>--}}
+                                     <td>{{$property->id}}</td>
                                     <td>
                                         @if(Storage::disk('public')->exists('property/'.$property->image) && $property->image)
                                             <img src="{{Storage::url('property/'.$property->image)}}" alt="{{$property->title}}" width="60" class="img-responsive img-rounded">
@@ -93,6 +95,7 @@
                             </tbody>
                         </table>
                     </div>
+                    {{ $properties->links() }}
                 </div>
             </div>
         </div>

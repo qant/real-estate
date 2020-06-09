@@ -21,7 +21,11 @@ class PropertyController extends Controller
 
     public function index()
     {
-        $properties = Property::latest()->withCount('comments')->get();
+        //$properties = Property::latest()->withCount('comments')->get();
+        //$properties = Property::paginate(50);
+        //$properties = Property::latest()->withCount('comments')->take(500)->get();
+        $properties = Property::latest()->withCount('comments')->paginate(50);
+        //$users = DB::table('users')->paginate(15);
 
         return view('admin.properties.index',compact('properties'));
     }

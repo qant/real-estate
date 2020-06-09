@@ -106,3 +106,4 @@ Route::group(['prefix'=>'user','namespace'=>'User','middleware'=>['auth','user']
     Route::delete('message/delete/{id}','DashboardController@messageDelete')->name('messages.destroy');
 
 });
+
